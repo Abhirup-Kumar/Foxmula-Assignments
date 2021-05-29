@@ -5,11 +5,6 @@ import java.util.*;
 public class stack{ //error handling is not implemented
 
     private LinkedList<Integer> list = new LinkedList<>();
-    private boolean empty;
-
-    public int getTop() {
-        return list.getLast();
-    }
 
     public void push(int x)
     {
