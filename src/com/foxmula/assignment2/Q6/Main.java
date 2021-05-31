@@ -33,7 +33,7 @@ public class Main {//assuming only +ve no. and k as a sum of pairs exists
                 continue;
            if(test.contains(tempk)) {
                System.out.println("Pair found: (" + test.get(itr) + "," + tempk + ")");
-               break;//pair has been found
+               break;// pair has been found
            }
             tempk = k;
         }
