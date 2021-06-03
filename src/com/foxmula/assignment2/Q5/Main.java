@@ -17,15 +17,23 @@ public class Main {
             test.add(put);
             put = sc.nextLine();
         }
+        Collections.sort(test);
         Traverse(test);
     }
 
     static void Traverse(ArrayList<String> test) {
+        String matchedI = null;
+        int flag = 1;
         System.out.println("Traversing!\n");
-        for (String i : test) {
-            System.out.println("The frequency of the word "+ i +" is "+
-                    Collections.frequency(test,i));
-            //test.removeAll(Collections.singleton(i));
+        for (String i : test)
+        {
+            if(flag == 1|| !(i.equals(matchedI)))
+            {
+                System.out.println("The frequency of the word "+ i +" is "+
+                        Collections.frequency(test,i));
+                matchedI = i;
+                flag =0;
+            }
         }
     }
 }
